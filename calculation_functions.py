@@ -37,6 +37,7 @@ def stock_growth(monthly_deposit, interest_rate, months_saving):
 # TODO: Add ränteavdrag
 # TODO: Break down the function into smaller functions for readability
 # TODO: Add increased house valuation (Separate function)
+# TODO: Add a starting amount of money that is already saved on the stock market
 def saving_plan(loan_amount, payments_number, nominal_interest=0, saving_amount=0, mortgage_payment=0, interest_rate=0, early_stopping=False):
         # Housing
         remaining_loan = loan_amount
