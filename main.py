@@ -48,7 +48,11 @@ def main():
 
         saved_results.append(results)
     
-    assert best_results != -np.inf, f"Cannot afford the interest and mortgage payments, with {money_available} per month"
+    assert best_results != -np.inf, f"\n\
+    Cannot afford the interest and mortgage payments, with {money_available} SEK per month\n\
+    Minimum required: {int(np.round(loan_amount / 12 * nominal_interest + loan_amount / payments_number))} SEK\n\
+    Interest cost starting at: {int(np.round(loan_amount / 12 * nominal_interest))} SEK\n\
+    Mortgage at: {int(np.round(loan_amount / payments_number))} SEK\n"
     
     print('--'*20)
     print(f"Purchase for end price: {end_price:,} SEK with an interest rate of {nominal_interest*100} %")
